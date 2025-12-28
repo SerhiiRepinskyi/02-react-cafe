@@ -1,11 +1,13 @@
 import css from './App.module.css';
 
-function App() {
+import CafeInfo from '../CafeInfo/CafeInfo';
+
+const App = () => {
   return (
-    <>
-      <div className={css.app}></div>
-    </>
+    <div className={css.app}>
+      <CafeInfo />
+    </div>
   );
-}
+};
 
 export default App;
