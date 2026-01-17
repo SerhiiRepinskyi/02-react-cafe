@@ -1,8 +1,10 @@
 # ☕ React Cafe Feedback Widget
 
-![Vercel](https://img.shields.io/badge/deployed%20on-Vercel-000000?logo=vercel&logoColor=white)
-![React](https://img.shields.io/badge/React-18.x-61DAFB?logo=react&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)
+<p align="center">
+  <img src="https://img.shields.io/badge/deployed%20on-Vercel-000000?logo=vercel&logoColor=white" />
+  <img src="https://img.shields.io/badge/React-19.x-61DAFB?logo=react&logoColor=black" />
+  <img src="https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white" />
+</p>
 
 A simple React application for collecting feedback about a café.
 
