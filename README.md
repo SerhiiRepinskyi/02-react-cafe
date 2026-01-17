@@ -1,73 +1,87 @@
-# React + TypeScript + Vite
+# ☕ React Cafe Feedback Widget
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Vercel](https://img.shields.io/badge/deployed%20on-Vercel-000000?logo=vercel&logoColor=white)
+![React](https://img.shields.io/badge/React-18.x-61DAFB?logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)
 
-Currently, two official plugins are available:
+A simple React application for collecting feedback about a café.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Users can leave a **good**, **neutral**, or **bad** review and instantly see live statistics.
 
-## React Compiler
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+![Preview](public/preview.png)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🔗 Live Demo
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+👉 [View live demo on Vercel](https://02-react-cafe-six-beta.vercel.app)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+👉 [GitHub repository](https://github.com/SerhiiRepinskyi/02-react-cafe)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## ✨ Features
+
+- Feedback voting with three options: **Good / Neutral / Bad**
+- Statistics calculation:
+  - total number of votes
+  - percentage of positive feedback
+- Conditional rendering:
+  - `No feedback yet` message when there are no votes
+- **Reset** button appears only when at least one vote exists
+- Clean and strict **TypeScript** typing
+- No console errors or warnings
+
+---
+
+## 🛠 Tech Stack
+
+- **React**
+- **TypeScript**
+- **Vite**
+- **CSS Modules**
+- **modern-normalize**
+- **Prettier**
+- **Vercel** (deployment)
+
+---
+
+## 📁 Project Structure
+
+```text
+src/
+├── components/
+│   ├── App/
+│   ├── CafeInfo/
+│   ├── VoteOptions/
+│   ├── VoteStats/
+│   └── Notification/
+│
+├── types/
+│   └── votes.ts
+│
+├── global.css
+└── main.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Each component has its own folder with: `.tsx` + `.module.css`
+- Components are exported using export default `export default`
+- Shared TypeScript types are located in в `src/types`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 Getting Started
+
+Clone the repository and run the project locally:
+
+```bash
+npm install
+npm run dev
+```
+
+The app will be available at:
+
+```
+http://localhost:5173
 ```
